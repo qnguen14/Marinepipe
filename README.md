@@ -21,3 +21,4 @@ GEMINI_API_KEY=api_key_here
 ![System Descriptions for Assistant](images/1.png)
 #### “How do I add a YouTube video?”
 ![Sample Answer for Aforementioned Question](images/2.png)  
+![Some more sample questions](images/3.png)  
