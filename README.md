@@ -15,3 +15,9 @@ Create a `.env` file in the root directory using the provided template `.env.sam
 
 ```env
 GEMINI_API_KEY=api_key_here
+```
+
+### Sample Questions with Quick Sanity Check
+![System Descriptions for Assistant](images/1.png)
+#### “How do I add a YouTube video?”
+![Sample Answer for Aforementioned Question](images/2.png)  
