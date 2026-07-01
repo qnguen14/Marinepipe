@@ -1,0 +1,20 @@
+name: Daily Marinepipe Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+jobs:
+  run-sync-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build the Docker Image
+        run: docker build -t blue-delta-sync .
+
+      - name: Run the Docker Container
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: docker run -e GEMINI_API_KEY="${GEMINI_API_KEY}" blue-delta-sync
